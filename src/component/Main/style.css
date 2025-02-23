@@ -1,0 +1,46 @@
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blue-color);
+}
+
+.img_icon {
+    width: 250px;
+}
+
+.button {
+    margin-top: 20px;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: var(--pink-color);
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 1.4px;
+}
+
+.input {
+    width: 500px;
+    height: 30px;
+    border-radius: 10px;
+    border-color: var(--pink-color);
+    border-width: 3px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+    appearance: none;
+    -moz-appearance: textfield;
+}
