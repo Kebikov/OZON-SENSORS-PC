@@ -40,23 +40,30 @@ const Main = () => {
         setId(inputData);
     }
 
+    const Version = () => (
+        <div className='version' >version 1.0.0</div>
+    )
+
     return(
         <div className='main' >
-            <img className='img_icon' src={icon.icon} alt='#' />
-            <Radio setIsBlock={setIsBlock} />
-            <input 
-                ref={refInput}
-                className='input' 
-                type='number' 
-                onChange={handleInput}
-                value={id ? id : ''}
-            />
-            <button 
-                className='button'
-                onClick={() => check(id) ? navigate(`/sensor/${isBlock}-${id}`) : undefined}
-            >
-                ЗАПРОС
-            </button>
+            <div className='container'> 
+                <img className='img_icon' src={icon.icon_2} alt='#' />
+                <Radio setIsBlock={setIsBlock} />
+                <input 
+                    ref={refInput}
+                    className='input' 
+                    type='number' 
+                    onChange={handleInput}
+                    value={id ? id : ''}
+                />
+                <button 
+                    className='button'
+                    onClick={() => check(id) ? navigate(`/sensor/${isBlock}-${id}`) : undefined}
+                >
+                    ЗАПРОС
+                </button>
+            </div>
+            <Version/>
         </div>
     )
 }
