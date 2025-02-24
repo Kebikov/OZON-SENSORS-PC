@@ -1,32 +1,59 @@
 import {useNavigate} from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import React from 'react';
 import { icon } from '../../source/icon/icon';
+import { SENSORS_B, SENSORS_A } from '../../data/sensors';
+import Radio from '../Radio/Radio';
 import './style.css';
 
 
 const Main = () => {
 
-    const [id, setId] = useState<number>();
-
+    const refInput = useRef<HTMLInputElement | null>(null);
+    const [id, setId] = useState<string | undefined>();
+    console.log('id = ', id);
+    const [isBlock, setIsBlock] = useState<'A' | 'B'>('B');
 
     const navigate = useNavigate();
 
+    const check = (id: string | undefined) => {
+        const lengthData = Object.keys(isBlock === 'A' ? SENSORS_A : SENSORS_B).length;
+        console.log('lengthData = ',lengthData);
+
+        if(id === undefined) {
+            if(refInput.current) refInput.current.placeholder = 'введите номер датчика';
+            return false;
+        }
+
+        if(!isNaN(Number(id)) && (Number(id) > lengthData || Number(id) === 0)) {
+            setId(undefined);
+            if(refInput.current) refInput.current.placeholder = 'нет такого датчика'
+            return false;
+        } else {
+            return true;
+        }
+    }
+
     const handleInput = (evn: React.ChangeEvent<HTMLInputElement>) => {
-        setId(Number(evn.target.value));
+        let inputData = evn.target.value;
+        console.log('inputData = ', inputData);
+        setId(inputData);
     }
 
     return(
         <div className='main' >
-            <img className='img_icon' src={icon.icon} alt='#'/>
+            <img className='img_icon' src={icon.icon} alt='#' />
+            <Radio setIsBlock={setIsBlock} />
             <input 
+                ref={refInput}
                 className='input' 
                 type='number' 
                 onChange={handleInput}
+                value={id ? id : ''}
             />
             <button 
                 className='button'
-                onClick={() => navigate(`/sensor/${id}`)}
+                onClick={() => check(id) ? navigate(`/sensor/${isBlock}-${id}`) : undefined}
             >
                 ЗАПРОС
             </button>
