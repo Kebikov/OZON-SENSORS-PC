@@ -1,13 +1,13 @@
 import React from 'react';
-import Main from './component/Main/Main';
-import Sensor from './component/Sensor/Sensor';
+import Main from './page/Main/Main';
+import Sensor from './page/Sensor/Sensor';
 import {HashRouter, Routes, Route} from 'react-router-dom';
-import './App.css';
+import './app.css';
 
 
 function App() {
     return (
-        <div className="App">
+        <div className="wrapper">
             <HashRouter>
                 <Routes>
                     <Route path='/' element={<Main/>} />

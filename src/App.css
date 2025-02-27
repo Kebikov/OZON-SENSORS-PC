@@ -1,12 +1,33 @@
-.App {
-    text-align: center;
-    background-color: red;
-    width: 100%;
-    min-height: 100vh;
+.wrapper {
+    
+    min-height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;   
+    -khtml-user-select: none;    
+    -moz-user-select: none;      
+    -ms-user-select: none;       
+    user-select: none; 
+
+    background-color: black;
+    /* border: 4px red solid; */
 }
 
-:root {
-    --blue-color: #095dfa;
-    --pink-color: #ff234e;
-    --yellow-color: #FFBC40;
+@media (max-width: 1000px) {
+    .wrapper {
+        overflow: scroll;
+    }
 }
+/* 
+@media (max-height: 700px) {
+    .wrapper {
+        overflow: scroll;
+    }
+} */
+
+
+
+

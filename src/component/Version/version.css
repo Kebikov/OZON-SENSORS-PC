@@ -1,0 +1,9 @@
+.version {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+}

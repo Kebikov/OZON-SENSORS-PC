@@ -1,0 +1,11 @@
+.img_box {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.img_icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}

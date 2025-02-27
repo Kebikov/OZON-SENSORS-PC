@@ -1,12 +1,15 @@
 .form {
     display: flex;
+    justify-content: center;
     gap: 30px;
+    width: 100%;
 }
 
 .radio {
     display: flex;
     position: relative;
-    width: 140px;
+    
+    min-width: 140px;
     height: 40px;
 }
 
