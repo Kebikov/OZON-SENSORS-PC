@@ -5,6 +5,7 @@ import Radio from '../../component/Radio/Radio';
 import Logo from '../../component/Logo/Logo';
 import check from '../../helpers/check';
 import Version from '../../component/Version/Version';
+import ButtonMain from '../../component/ButtonMain/ButtonMain';
 import './main.css';
 
 
@@ -35,12 +36,10 @@ const Main = () => {
                     onChange={handleInput}
                     value={id ? id : ''}
                 />
-                <button 
-                    className='button'
-                    onClick={() => check({id, isBlock, refInput, setId}) ? navigate(`/sensor/${isBlock}-${id}`) : undefined}
-                >
-                    ЗАПРОС
-                </button>
+                <ButtonMain
+                    text='ЗАПРОС'
+                    onPress={() => check({id, isBlock, refInput, setId}) ? navigate(`/sensor/${isBlock}-${id}`) : undefined}
+                />
             </div>
             <Version/>
         </div>
