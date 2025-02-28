@@ -13,20 +13,20 @@ const check = ({
     refInput,
     setId
 }: Icheck) => {
-    const lengthData = Object.keys(isBlock === 'A' ? SENSORS_A : SENSORS_B).length;
-    console.log('lengthData = ',lengthData);
+    const dataSensor = isBlock === 'A' ? SENSORS_A : SENSORS_B;
+    const arrayKey = Object.keys(dataSensor);
 
     if(id === undefined) {
         if(refInput.current) refInput.current.placeholder = 'введите номер датчика';
         return false;
     }
 
-    if(!isNaN(Number(id)) && (Number(id) > lengthData || Number(id) === 0)) {
+    if(arrayKey.includes(id)) {
+        return true;
+    } else {
         setId(undefined);
         if(refInput.current) refInput.current.placeholder = 'нет такого датчика'
         return false;
-    } else {
-        return true;
     }
 }
 

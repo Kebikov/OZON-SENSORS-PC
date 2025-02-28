@@ -23,6 +23,13 @@ const Main = () => {
         setId(inputData);
     }
 
+    const onPressButton = () => check({id, isBlock, refInput, setId}) ? navigate(`/sensor/${isBlock}-${id}`) : undefined;
+
+    const handleKeyDown = (evt: React.KeyboardEvent<HTMLInputElement>) => {
+        if (evt.key === "Enter") {
+            onPressButton();
+        }
+    }
 
     return(
         <div className='main' >
@@ -34,11 +41,12 @@ const Main = () => {
                     className='input' 
                     type='number' 
                     onChange={handleInput}
+                    onKeyDown={handleKeyDown}
                     value={id ? id : ''}
                 />
                 <ButtonMain
                     text='ЗАПРОС'
-                    onPress={() => check({id, isBlock, refInput, setId}) ? navigate(`/sensor/${isBlock}-${id}`) : undefined}
+                    onPress={onPressButton}
                 />
             </div>
             <Version/>

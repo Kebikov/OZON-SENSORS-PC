@@ -28,7 +28,7 @@ const Radio: FC<Iradio> = ({setIsBlock}) => {
                 <label className='label' htmlFor='A' >БЛОК А</label>
             </div>
             <div className='radio'>
-                <input className='radio_input' onChange={onSelect} name='block' type={'radio'} id='B' value={'B'} defaultChecked />
+                <input className='radio_input' onChange={onSelect} name='block' type={'radio'} id='B' value={'B'} />
                 <label  className='label' htmlFor='B' >БЛОК Б</label>
             </div>
         </form>
