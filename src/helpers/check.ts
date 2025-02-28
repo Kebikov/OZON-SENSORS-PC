@@ -1,8 +1,9 @@
 import { SENSORS_A, SENSORS_B } from "../data/sensors";
+import { IBlockValue } from "../page/Main/Main";
 
 interface Icheck {
     id: string | undefined;
-    isBlock: "A" | "B";
+    isBlock: IBlockValue;
     refInput: React.RefObject<HTMLInputElement | null>;
     setId: React.Dispatch<React.SetStateAction<string | undefined>>
 }
@@ -13,6 +14,15 @@ const check = ({
     refInput,
     setId
 }: Icheck) => {
+
+    if(isBlock === undefined) {
+        if(refInput.current) {
+            refInput.current.value = '';
+            refInput.current.placeholder = 'выберите блок'
+        };
+        return false;
+    }
+
     const dataSensor = isBlock === 'A' ? SENSORS_A : SENSORS_B;
     const arrayKey = Object.keys(dataSensor);
 
@@ -31,3 +41,4 @@ const check = ({
 }
 
 export default check;
+

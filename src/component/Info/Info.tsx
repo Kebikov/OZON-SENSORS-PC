@@ -1,7 +1,9 @@
 import TextInfo from '../TextInfo/TextInfo';
-import GoBack from '../GoBack/GoBack';
 import { ISensors } from '../../data/sensors';
 import { FC } from 'react';
+import {useNavigate} from 'react-router-dom';
+import ButtonMain from '../ButtonMain/ButtonMain';
+import Reminder from '../Reminder/Reminder';
 import './info.css';
 
 
@@ -16,6 +18,8 @@ const Info: FC<IInfo> = ({
     SENSORS
 }) => {
 
+    const navigate = useNavigate();
+
     return(
         <div className='info'>
             <div className='line'/>
@@ -29,7 +33,18 @@ const Info: FC<IInfo> = ({
                 {SENSORS[sensorId].subtitle.map((item, i) => <TextInfo text={item.text} key={i} />)}
             </div>
             
-            <GoBack/>
+            <ButtonMain
+                text='НАЗАД'
+                onPress={() => navigate('/')}
+                styleBtn={{
+                    fontSize: '18px',
+                    height: '40px',
+                    width: '160px',
+                    marginTop: '40px'
+                }}
+            />
+            <div className='line' style={{marginTop: '20px'}}/>
+            <Reminder/>
         </div>
     )
 };

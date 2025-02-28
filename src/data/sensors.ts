@@ -222,119 +222,176 @@ export const SENSORS_A: ISensors = {
         img: require('../source/imgPlanA/17.jpg')
     },
     18: {
-        type: 'Дымовой извещатель',
-        title: 'Блок "А", АБК 2 (2-этаж)',
+        type: 'Ручной извещатель',
+        title: 'Блок "А", АБК-1 (3-этаж)',
         subtitle: [
             {
-                text: 'все кабинеты 2-го этажа'
-            }
+                text: 'у входа на лестн.клетки №1, №2'
+            },
+            {
+                text: 'коридор АБК 1'
+            },
+            {
+                text: 'балкон над воротами №1-15'
+            },
         ],
-        img: require('../source/imgPlan/18.jpg')
+        img: require('../source/imgPlanA/18.jpg')
     },
     19: {
         type: 'Дымовой извещатель',
-        title: 'Блок "А", АБК 1 (3-этаж)',
+        title: 'Блок "А", АБК-1 (3-этаж)',
         subtitle: [
             {
-                text: 'коридор у выхода на лестн.клетку №1'
+                text: 'комната приема пищи (у лестн.клетки №1)'
             },
             {
-                text: 'столовая'
+                text: 'коридор у лестн.клетки №1'
             }
         ],
-        img: require('../source/imgPlan/19.jpg')
+        img: require('../source/imgPlanA/19.jpg')
     },
     20: {
         type: 'Дымовой извещатель',
-        title: 'Блок "А", АБК 1 (3-этаж)',
+        title: 'Блок "А", АБК-1 (3-этаж)',
         subtitle: [
             {
-                text: 'коридор у каб. 303-307'
+                text: 'коридор'
             },
             {
-                text: 'каб. №303, 306, 307'
+                text: 'комната приема пищи(у лестн.клетки №2)'
+            },
+            {
+                text: 'административные помещения'
             }
         ],
-        img: require('../source/imgPlan/20.jpg')
+        img: require('../source/imgPlanA/20.jpg')
     },
     21: {
         type: 'Ручной извещатель',
-        title: 'Блок "А", АБК 1 (3-этаж)',
+        title: 'Блок "А", АБК-1 (4-этаж)',
         subtitle: [
             {
-                text: 'у выхода на лестн.клетку №1'
+                text: 'у входа на лестн.клетки №1, №2'
             },
             {
-                text: 'у выхода на лестн.клетку №2'
-            },
-            {
-                text: 'балкон над воротами № 16-26'
+                text: 'коридор'
             }
         ],
-        img: require('../source/imgPlan/21.jpg')
+        img: require('../source/imgPlanA/21.jpg')
     },
     22: {
-        type: 'Ручной извещатель',
-        title: 'Блок "А", АБК 2 (балкон)',
-        subtitle: [
-            {
-                text: 'балкон над воротами №39-28'
-            }
-        ],
-        img: require('../source/imgPlan/22.jpg')
-    },
-    23: {
         type: 'Дымовой извещатель',
-        title: 'Блок "А", АБК 1 (4-этаж)',
-        subtitle: [
-            {
-                text: 'каб. №401'
-            },
-            {
-                text: 'каб. №408'
-            },
-            {
-                text: 'коридор'
-            }
-        ],
-        img: require('../source/imgPlan/23.jpg')
-    },
-    24: {
-        type: 'Ручной извещатель',
-        title: 'Блок "А", АБК 1 (4-этаж)',
+        title: 'Блок "А", АБК-1 (4-этаж)',
         subtitle: [
             {
                 text: 'коридор'
+            },
+            {
+                text: 'все помещения на этаже'
             }
         ],
-        img: require('../source/imgPlan/24.jpg')
+        img: require('../source/imgPlanA/22.jpg')
     },
     25: {
-        type: 'Дымовой извещатель',
-        title: 'Блок "А", АБК 1 (4-этаж)',
+        type: 'Сработка спринклера',
+        title: 'Блок "А", склад',
         subtitle: [
             {
-                text: 'каб. №405'
-            },
-            {
-                text: 'каб. №406'
-            },
-            {
-                text: 'каб. №407'
-            },
-        ],
-        img: require('../source/imgPlan/25.jpg')
-    },
-    26: {
-        type: 'Дымовой извещатель',
-        title: 'Блок "А", Cклад  (1-этаж)',
-        subtitle: [
-            {
-                text: 'электрощитовая'
+                text: 'секция №1'
             }
         ],
-        img: require('../source/imgPlan/26.jpg')
+        img: require('../source/imgPlanA/25.jpg')
     },
+    26: {
+        type: 'Сработка спринклера',
+        title: 'Блок "А", склад',
+        subtitle: [
+            {
+                text: 'секция №2'
+            }
+        ],
+        img: require('../source/imgPlanA/26.jpg')
+    },
+    27: {
+        type: 'Сработка спринклера',
+        title: 'Блок "А", склад',
+        subtitle: [
+            {
+                text: 'секция №3'
+            }
+        ],
+        img: require('../source/imgPlanA/27.jpg')
+    },
+    28: {
+        type: 'Сработка спринклера',
+        title: 'Блок "А", склад',
+        subtitle: [
+            {
+                text: 'секция №4'
+            }
+        ],
+        img: require('../source/imgPlanA/28.jpg')
+    },
+    29: {
+        type: 'Сработка спринклера',
+        title: 'Блок "А", склад',
+        subtitle: [
+            {
+                text: 'секция №5'
+            }
+        ],
+        img: require('../source/imgPlanA/29.jpg')
+    },
+    30: {
+        type: 'Сработка спринклера',
+        title: 'Блок "А", склад',
+        subtitle: [
+            {
+                text: 'секция №6'
+            }
+        ],
+        img: require('../source/imgPlanA/30.jpg')
+    },
+    31: {
+        type: 'Сработка спринклера',
+        title: 'Блок "А", склад',
+        subtitle: [
+            {
+                text: 'секция №7'
+            }
+        ],
+        img: require('../source/imgPlanA/31.jpg')
+    },
+    32: {
+        type: 'Сработка спринклера',
+        title: 'Блок "А", склад',
+        subtitle: [
+            {
+                text: 'секция №8'
+            }
+        ],
+        img: require('../source/imgPlanA/32.jpg')
+    },
+    33: {
+        type: 'Сработка спринклера',
+        title: 'Блок "А", склад',
+        subtitle: [
+            {
+                text: 'секция №9'
+            }
+        ],
+        img: require('../source/imgPlanA/33.jpg')
+    },
+    34: {
+        type: 'Сработка спринклера',
+        title: 'Блок "А", склад',
+        subtitle: [
+            {
+                text: 'секция №10'
+            }
+        ],
+        img: require('../source/imgPlanA/34.jpg')
+    }
 }
 
 export const SENSORS_B: ISensors = {

@@ -1,42 +1,28 @@
 import { FC } from "react";
-
+import './buttonMain.css';
 
 interface IButtonMain {
     onPress: () => void;
     text: string;
+    styleBtn?: React.CSSProperties;
 }
 
 
 const ButtonMain: FC<IButtonMain> = ({
     text,
-    onPress
+    onPress,
+    styleBtn
 }) => {
     return(
         <button 
-            style={styles.button}
+            style={styleBtn}
+            className="buttonMain"
             onClick={onPress}
         >
             {text}
         </button>
     )
 };
-
-
-const styles: {
-    button: CSS
-} = {
-    button: {
-        marginTop: '20px',
-        width: '160px',
-        height: '50px',
-        borderRadius: '10px',
-        backgroundColor: 'var(--pink-color)',
-        fontSize: '20px',
-        fontWeight: '600',
-        color: '#fff',
-        letterSpacing: '1.4px'
-    }
-}
 
 
 export default ButtonMain;

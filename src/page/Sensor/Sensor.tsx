@@ -2,14 +2,16 @@ import { useParams } from 'react-router-dom';
 import { SENSORS_A, SENSORS_B, ISensors } from '../../data/sensors';
 import NoData from '../../component/NoData/NoData';
 import ImageSensor from '../../component/ImageSensor/ImageSensor';
-import GoBack from '../../component/GoBack/GoBack';
+import {useNavigate} from 'react-router-dom';
 import Info from '../../component/Info/Info';
+import ButtonMain from '../../component/ButtonMain/ButtonMain';
 import './sensor.css';
 
 
 const Sensor = () => {
 
     const {id} = useParams();
+    const navigate = useNavigate();
 
     let SENSORS: ISensors = {};
     let sensorId = 0;
@@ -43,7 +45,10 @@ const Sensor = () => {
                 :
                 <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                     <NoData/>
-                    <GoBack/>
+                    <ButtonMain
+                        text='ЗАПРОС'
+                        onPress={() => navigate('/')}
+                    />
                 </div>
             }
         </div>

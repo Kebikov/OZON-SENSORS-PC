@@ -6,7 +6,11 @@ import Logo from '../../component/Logo/Logo';
 import check from '../../helpers/check';
 import Version from '../../component/Version/Version';
 import ButtonMain from '../../component/ButtonMain/ButtonMain';
+import Minsk from '../../component/Minsk/Minsk';
 import './main.css';
+
+
+export type IBlockValue = 'A' | 'B' | undefined;
 
 
 const Main = () => {
@@ -15,7 +19,7 @@ const Main = () => {
     const navigate = useNavigate();
 
     const [id, setId] = useState<string | undefined>();
-    const [isBlock, setIsBlock] = useState<'A' | 'B'>('B');
+    const [isBlock, setIsBlock] = useState<IBlockValue>(undefined);
 
     const handleInput = (evn: React.ChangeEvent<HTMLInputElement>) => {
         let inputData = evn.target.value;
@@ -35,21 +39,24 @@ const Main = () => {
         <div className='main' >
             <div className='container'> 
                 <Logo/>
-                <Radio setIsBlock={setIsBlock} />
-                <input 
-                    ref={refInput}
-                    className='input' 
-                    type='number' 
-                    onChange={handleInput}
-                    onKeyDown={handleKeyDown}
-                    value={id ? id : ''}
-                />
+                <Radio isBlock={isBlock} setIsBlock={setIsBlock} />
+                <div className='box_input'>
+                    <input 
+                        ref={refInput}
+                        className='input' 
+                        type='number' 
+                        onChange={handleInput}
+                        onKeyDown={handleKeyDown}
+                        value={id ? id : ''}
+                    />
+                </div>
                 <ButtonMain
                     text='ЗАПРОС'
                     onPress={onPressButton}
                 />
             </div>
             <Version/>
+            <Minsk/>
         </div>
     )
 }
