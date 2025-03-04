@@ -1,5 +1,5 @@
 .reminder {
-    margin-top: 20px;
+    margin-top: 50px;
 
     display: flex;
     justify-content: center;
@@ -66,7 +66,7 @@
 
 .note__text {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: calc(14px + 8 * (100vw - 500px) / 1420);;
+    font-size: 16px;
     font-weight: 500;
     color: #fff;
 
