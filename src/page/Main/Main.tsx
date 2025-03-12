@@ -39,6 +39,7 @@ const Main = () => {
         <div className='main' >
             <div className='container'> 
                 <Logo/>
+                
                 <Radio isBlock={isBlock} setIsBlock={setIsBlock} />
                 <div className='box_input'>
                     <input 
@@ -50,6 +51,7 @@ const Main = () => {
                         value={id ? id : ''}
                     />
                 </div>
+                {/* <div className='description'><span id='span' >ПО</span> для быстрого реагирования</div> */}
                 <ButtonMain
                     text='ЗАПРОС'
                     onPress={onPressButton}

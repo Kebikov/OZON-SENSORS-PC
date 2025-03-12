@@ -5,7 +5,7 @@ import './logo.css';
 const Logo = () => {
     return (
         <div className='img_box' >
-            <img className='img_icon' src={icon.icon_2} alt='#' />
+            <img className='img_icon' src={icon.icon_1} alt='#' />
         </div>
     )
 }
