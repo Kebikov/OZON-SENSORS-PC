@@ -8,5 +8,8 @@ export const icon = {
     phone: require('../icon/phone.png'),
     key: require('../icon/key.png'),
     electro: require('../icon/electro.png'),
-    group: require('../icon/group.png')
+    group: require('../icon/group.png'),
+    poj: require('../icon/poj.png'),
+    down_logo: require('../icon/down_logo.png'),
+    mask: require('../icon/mask.png')
 }

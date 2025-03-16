@@ -14,11 +14,16 @@
 
     background-color: black;
     /* border: 4px red solid; */
+
+    /* width: 100%;
+    min-width: 600px; */
+    overflow-x: scroll;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 600px) {
     .wrapper {
         overflow: scroll;
+        overflow-x: scroll;
     }
 }
 /* 

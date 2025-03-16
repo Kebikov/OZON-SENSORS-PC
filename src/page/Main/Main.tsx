@@ -38,7 +38,7 @@ const Main = () => {
     return(
         <div className='main' >
             <div className='container'> 
-                <Logo/>
+                <Logo isBlock={isBlock} />
                 
                 <Radio isBlock={isBlock} setIsBlock={setIsBlock} />
                 <div className='box_input'>

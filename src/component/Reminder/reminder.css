@@ -16,13 +16,13 @@
 .reminder__box-title {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 
     gap: 10px;
 }
 .reminder__title-img-box {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
 }
 .reminder__title-img {
     width: 100%;
@@ -33,7 +33,7 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     font-weight: 700;
-    color: #fff;
+    color: #ffffff;
 
     text-transform: uppercase;
 }
